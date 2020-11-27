@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO8859-1" ?>
+<CHRIST>
+	<CS>
+		<STU-NAME>sanjay</STU-NAME>
+		<STU-BRANCH>koramagala</STU-BRANCH>
+		<STU-COLLEGE>christ university</STU-COLLEGE>
+		<STU-EMAIL>sanjay.a.@christuniversity.in</STU-EMAIL>
+	</CS>
+	<CS>
+		<STU-NAME>John</STU-NAME>
+		<STU-BRANCH>Delhi ncr</STU-BRANCH>
+		<STU-COLLEGE>Christ university</STU-COLLEGE>
+		<STU-EMAIL>john.ncr.@christuniversity.in</STU-EMAIL>
+	</CS>
+	<CS>
+		<STU-NAME>rock</STU-NAME>
+		<STU-BRANCH>Delhi</STU-BRANCH>
+		<STU-COLLEGE>NIT</STU-COLLEGE>
+		<STU-EMAIL>rock.@NIT.in</STU-EMAIL>
+	</CS>
+</CHRIST>
