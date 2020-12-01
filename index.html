@@ -26,6 +26,24 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+var today = new Date();
+  var expiry = new Date(today.getTime() + 30 * 24 * 3600 * 1000); // plus 30 days
+
+  function setCookie(name, value)
+  {
+    document.cookie=name + "=" + escape(value) + "; path=/; expires=" + expiry.toGMTString();
+  }
+function putCookie(form)
+               
+  {
+   setCookie("userName", form[0].usrname.value);
+   setCookie("psw", form[0].psw.value);
+
+    return true;
+  }
+
+  </script>
 <style type="text/css">
 
 </style>
@@ -39,10 +57,10 @@
         <div class="row">
         <div class="col-sm-6-6 col-sm-6 col-xs-12"></div>
         <div class="col-sm-6-6 col-sm-6 col-xs-12">
-                            <form class="form-container" method="post" name="re">
+                            <form class="form-container">
                             <span class="glyphicon glyphicon-leaf"></span>
                             <h2>Register Here!</h2>
-                 <div class="form-group">
+                  <div class="form-group">
                     <label>name</label>
                     <input type="text" class="form-control"   pattern="[A-Za-z]+" required="">
                   </div>
@@ -56,19 +74,19 @@
                   </div>
                   <div class="form-group">
                     <label>Branch</label>
-                    <input type="text" class="form-control"    placeholder="Branch"  maxlength="15" method="POST" name="name" required="">
+                    <input type="text" class="form-control"    placeholder="Branch"  maxlength="15" method="POST"  required="">
                   </div>
                   <div class="form-group">
                     <label>State</label>
-                    <input type="text" class="form-control"    placeholder="State"  maxlength="15" method="POST" name="name">
+                    <input type="text" class="form-control"    placeholder="State"  maxlength="15" method="POST" >
                   </div>
                   <div class="form-group">
                     <label>Address</label>
-                    <input type="text" class="form-control"  maxlength="15" method="POST" name="name">
+                    <input type="text" class="form-control"  maxlength="15" method="POST" >
                   </div>
                   <div class="form-group">
                     <label>Age</label>
-                    <input type="number" class="form-control" min="0" pattern="[0-9]+"maxlength="15" method="POST" name="name">
+                    <input type="number" class="form-control" min="0" pattern="[0-9]+"maxlength="15" method="POST" >
                   </div>
                   <div class="form-group">
                     <label>Phone number</label>
@@ -76,14 +94,14 @@
                   </div>
                   <div class="form-group">
                     <label>Username</label>
-                    <input type="phone" class="form-control" required="">
+                    <input type="phone" class="form-control" required="" name='usrname'>
                   </div>
                   <div class="form-group">
                     <label>Password</label>
-                    <input type="password" class="form-control"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  required="">
+                    <input type="password" class="form-control"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  required="" name="psw">
                   </div>
                   
-<input type="submit" class="btn btn-success" id="myBtn">
+<input type="submit" class="btn btn-success" id="myBtn" onclick="putCookie(document.getElementsByTagName('form'));">
 <script>
 var x = document.getElementById("myBtn");
 x.addEventListener("click", check);
@@ -113,3 +131,4 @@ function done() {
 
 </body>
 </html>
+
