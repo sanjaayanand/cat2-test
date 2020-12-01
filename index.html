@@ -18,7 +18,6 @@
 }
 </style>
 <link href="https://fonts.googleapis.com/css?family=Eater" rel="stylesheet">
-    <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 <!-- Optional theme -->
@@ -28,7 +27,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script>
 var today = new Date();
-  var expiry = new Date(today.getTime() + 30 * 24 * 3600 * 1000); // plus 30 days
+  var expiry = new Date(today.getTime() + 30 * 24 * 3600 * 1000);
 
   function setCookie(name, value)
   {
@@ -44,6 +43,14 @@ function putCookie(form)
   }
 
   </script>
+  <script>
+var x = document.getElementById("myBtn");
+x.addEventListener("click", check);
+
+function check() {
+  alert ("check the details");
+}
+</script>
 <style type="text/css">
 
 </style>
@@ -62,11 +69,11 @@ function putCookie(form)
                             <h2>Register Here!</h2>
                   <div class="form-group">
                     <label>name</label>
-                    <input type="text" class="form-control"   pattern="[A-Za-z]+" required="">
+                    <input type="text" class="form-control"   pattern="[A-Za-z]+" title="Please enter only aplhabets" required="">
                   </div>
                   <div class="form-group">
                     <label>Email</label>
-                    <input type="email" class="form-control"  placeholder="Email" required="">
+                    <input type="email" class="form-control"  placeholder="Email" title="Please enter in the format of name@officalmailid.Com/in/co" required="">
                   </div>
                   <div class="form-group">
                     <label>University or College name</label>
@@ -86,7 +93,7 @@ function putCookie(form)
                   </div>
                   <div class="form-group">
                     <label>Age</label>
-                    <input type="number" class="form-control" min="0" pattern="[0-9]+"maxlength="15" method="POST" >
+                    <input type="number" class="form-control" min="0" max="28" pattern="[0-9]+"maxlength="15" method="POST" >
                   </div>
                   <div class="form-group">
                     <label>Phone number</label>
@@ -98,23 +105,10 @@ function putCookie(form)
                   </div>
                   <div class="form-group">
                     <label>Password</label>
-                    <input type="password" class="form-control"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  required="" name="psw">
+                    <input type="password" class="form-control"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Password must contain aleast one of these value (@#$,AA,a,123)."  required="" name="psw">
                   </div>
                   
 <input type="submit" class="btn btn-success" id="myBtn" onclick="putCookie(document.getElementsByTagName('form'));">
-<script>
-var x = document.getElementById("myBtn");
-x.addEventListener("click", check);
-x.addEventListener("click", done);
-
-function check() {
-  alert ("check the details");
-}
-
-function done() {
-  alert ("Done");
-}
-</script>
 </div>
                  
                 
